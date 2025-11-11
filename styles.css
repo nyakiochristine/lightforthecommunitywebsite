@@ -32,6 +32,48 @@ nav a:hover {
   text-decoration: underline;
 }
 
+/* Hide toggle button on desktop, show on mobile */
+.nav-toggle {
+  display: none;
+  background: #228b22;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  position: absolute;
+  top: 20px;
+  right: 16px;
+  z-index: 1001;
+  border-radius: 4px;
+  padding: 0 12px;
+}
+
+@media (max-width: 700px) {
+  .nav-toggle {
+    display: block;
+  }
+  nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #eef8f0;
+    position: absolute;
+    left: 0;
+    top: 68px;
+    z-index: 1000;
+  }
+  nav.open {
+    display: flex;
+  }
+  nav a {
+    margin: 14px 0;
+    font-size: 1.2rem;
+  }
+  header {
+    position: relative;
+  }
+}
+
+
 .hero {
   background: #e0f7fa;
   padding: 60px;
