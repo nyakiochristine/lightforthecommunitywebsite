@@ -1,1 +1,204 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Light for Community empowers children through education, nutrition, and compassionate community action."><title>Light for Community | Education & Nutrition</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css"></head><body><header class="site-header"><a class="brand" href="#top" aria-label="Light for Community home"><img src="lfc.jpg" alt="Light for Community"></a><button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">Menu <span>☰</span></button><nav aria-label="Main navigation"><a href="#about">About us</a><a href="#projects">Our work</a><a href="#involved">Get involved</a><a href="#resources">Resources</a><a href="#contact">Contact</a><a class="nav-donate" href="#involved">Donate</a></nav></header><main id="top"><section class="hero"><div class="hero-copy"><p class="eyebrow">Education · Nutrition · Opportunity</p><h1>Every child deserves a brighter beginning.</h1><p class="hero-text">We work alongside communities to create safer schools, healthier childhoods, and opportunities that last.</p><div class="hero-actions"><a class="button button-primary" href="#involved">Support our work <span>→</span></a><a class="text-link" href="#about">Discover our story</a></div></div><div class="hero-art" aria-hidden="true"><div class="sun"></div><div class="hill hill-one"></div><div class="hill hill-two"></div><div class="book"><i></i><i></i></div><div class="sprout"><b></b><b></b><em></em></div><p>Hope grows here.</p></div></section><section class="mission-band"><p class="eyebrow">Our mission</p><p class="mission-statement">A community where every child can learn, thrive, and imagine a future full of possibility.</p></section><section class="content-section about" id="about"><div class="section-intro"><p class="eyebrow">Who we are</p><h2>Small acts of care can change a whole community.</h2></div><div class="about-copy"><p>Light for Community is a community-based initiative helping marginalized families access quality education and health services. We focus our energy where it is needed most: rebuilding schools and fighting malnutrition.</p><p>With compassion, practical support, and local partnership, we help children grow into their full potential.</p></div><div class="values"><article><span>01</span><h3>Education</h3><p>Learning spaces and materials that help every child participate.</p></article><article><span>02</span><h3>Health</h3><p>Nutrition and care that give children the strength to learn.</p></article><article><span>03</span><h3>Community</h3><p>Locally rooted work that creates sustainable change together.</p></article></div></section><section class="content-section projects" id="projects"><div class="section-heading"><div><p class="eyebrow">Where we’re working</p><h2>Building a better place to learn.</h2></div><span>01</span></div><article class="project-card"><div class="project-visual" aria-hidden="true"><div class="school-roof"></div><div class="school-body"><i></i><i></i><i></i></div><div class="tree"><b></b><b></b><b></b><i></i></div><div class="ground"></div></div><div class="project-content"><p class="tag">Current project</p><h3>Adima School Renovation</h3><p>We are helping renovate Adima Primary and Secondary School with modern classrooms, reliable water access, and daily nutrition for children.</p><ul><li>Safer, brighter classrooms</li><li>Nutrition support for enrolled students</li><li>Books and scholarships for promising learners</li></ul><a class="button button-primary" href="#involved">Support this project <span>→</span></a></div></article></section><section class="involved" id="involved"><div><p class="eyebrow">Make a difference</p><h2>There’s a place for you in this story.</h2><p>Give, volunteer, partner, or share our work. Every act of support helps a child move closer to a brighter future.</p></div><div class="involved-actions"><a class="button button-light" href="mailto:lightforcommunity@example.org?subject=I%20want%20to%20support%20Light%20for%20Community">Become a supporter <span>→</span></a><a class="button button-outline" href="#contact">Partner with us</a></div></section><section class="content-section resources" id="resources"><p class="eyebrow">From our community</p><h2>Resources & updates</h2><div class="resource-grid"><a href="#contact"><span>01</span><strong>Educational materials</strong><small>Helpful downloads for learners</small><b>→</b></a><a href="#contact"><span>02</span><strong>Health & nutrition tips</strong><small>Practical guidance for families</small><b>→</b></a><a href="#contact"><span>03</span><strong>Stories of change</strong><small>Moments from our journey</small><b>→</b></a></div></section><section class="contact" id="contact"><div class="contact-copy"><p class="eyebrow">Stay connected</p><h2>Let’s keep the light growing.</h2><p>Have a question, a partnership idea, or want to learn more? We’d love to hear from you.</p><a class="text-link" href="mailto:lightforcommunity@example.org">lightforcommunity@example.org</a></div><form class="newsletter"><label for="email">Get community updates</label><div><input type="email" id="email" placeholder="Your email address" required><button type="submit" aria-label="Sign up for newsletter">→</button></div><small>Stories, progress, and ways to get involved.</small></form></section></main><footer><img src="lfc.jpg" alt="Light for Community"><p>Empowering education and nutrition.</p><p>© <span id="year"></span> Light for Community</p></footer><script>const t=document.querySelector('.nav-toggle'),n=document.querySelector('nav');t.addEventListener('click',()=>{const o=n.classList.toggle('open');t.setAttribute('aria-expanded',o)});document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>{n.classList.remove('open');t.setAttribute('aria-expanded','false')}));document.getElementById('year').textContent=new Date().getFullYear();</script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Light for Community empowers children through education, nutrition, and compassionate community action.">
+<title>Light for Community | Education & Nutrition</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+<a class="brand" href="#top" aria-label="Light for Community home">
+<img src="lfc.jpg" alt="Light for Community">
+</a>
+<button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">Menu <span>☰</span>
+</button>
+<nav aria-label="Main navigation">
+<a href="#about">About us</a>
+<a href="#projects">Our work</a>
+<a href="#involved">Get involved</a>
+<a href="#resources">Resources</a>
+<a href="#contact">Contact</a>
+<a class="nav-donate" href="#involved">Donate</a>
+</nav>
+</header>
+<main id="top">
+<section class="hero">
+<div class="hero-copy">
+<p class="eyebrow">Education · Nutrition · Opportunity</p>
+<h1>Every child deserves a brighter beginning.</h1>
+<p class="hero-text">We work alongside communities to create safer schools, healthier childhoods, and opportunities that last.</p>
+<div class="hero-actions">
+<a class="button button-primary" href="#involved">Support our work <span>→</span>
+</a>
+<a class="text-link" href="#about">Discover our story</a>
+</div>
+</div>
+<div class="hero-art" aria-hidden="true">
+<div class="sun">
+</div>
+<div class="hill hill-one">
+</div>
+<div class="hill hill-two">
+</div>
+<div class="book">
+<i>
+</i>
+<i>
+</i>
+</div>
+<div class="sprout">
+<b>
+</b>
+<b>
+</b>
+<em>
+</em>
+</div>
+<p>Hope grows here.</p>
+</div>
+</section>
+<section class="mission-band">
+<p class="eyebrow">Our mission</p>
+<p class="mission-statement">A community where every child can learn, thrive, and imagine a future full of possibility.</p>
+</section>
+<section class="content-section about" id="about">
+<div class="section-intro">
+<p class="eyebrow">Who we are</p>
+<h2>Small acts of care can change a whole community.</h2>
+</div>
+<div class="about-copy">
+<p>Light for Community is a community-based initiative in the Democratic Republic of Congo, helping marginalized families access quality education and health services. We focus our energy where it is needed most: rebuilding schools and fighting malnutrition.</p>
+<p>With compassion, practical support, and local partnership, we help children grow into their full potential.</p>
+</div>
+<div class="values">
+<article>
+<span>01</span>
+<h3>Education</h3>
+<p>Learning spaces and materials that help every child participate.</p>
+</article>
+<article>
+<span>02</span>
+<h3>Health</h3>
+<p>Nutrition and care that give children the strength to learn.</p>
+</article>
+<article>
+<span>03</span>
+<h3>Community</h3>
+<p>Locally rooted work that creates sustainable change together.</p>
+</article>
+</div>
+</section>
+<section class="content-section projects" id="projects">
+<div class="section-heading">
+<div>
+<p class="eyebrow">Where we’re working</p>
+<h2>Building a better place to learn.</h2>
+</div>
+<span>01</span>
+</div>
+<article class="project-card">
+<div class="project-visual" aria-hidden="true">
+<div class="school-roof">
+</div>
+<div class="school-body">
+<i>
+</i>
+<i>
+</i>
+<i>
+</i>
+</div>
+<div class="tree">
+<b>
+</b>
+<b>
+</b>
+<b>
+</b>
+<i>
+</i>
+</div>
+<div class="ground">
+</div>
+</div>
+<div class="project-content">
+<p class="tag">Current project</p>
+<h3>Adima School Renovation</h3>
+<p>We are helping renovate Adima Primary and Secondary School with modern classrooms, reliable water access, and daily nutrition for children.</p>
+<ul>
+<li>Safer, brighter classrooms</li>
+<li>Nutrition support for enrolled students</li>
+<li>Books and scholarships for promising learners</li>
+</ul>
+<a class="button button-primary" href="#involved">Support this project <span>→</span>
+</a>
+</div>
+</article>
+</section>
+<section class="involved" id="involved">
+<div>
+<p class="eyebrow">Make a difference</p>
+<h2>There’s a place for you in this story.</h2>
+<p>Give, volunteer, partner, or share our work. Every act of support helps a child move closer to a brighter future.</p>
+</div>
+<div class="involved-actions">
+<a class="button button-light" href="mailto:lightforcommunity2@gmail.com?subject=I%20want%20to%20support%20Light%20for%20Community">Become a supporter <span>→</span>
+</a>
+<a class="button button-outline" href="mailto:lightforcommunity2@gmail.com?subject=Partnership%20with%20Light%20for%20Community">Partner with us</a>
+</div>
+</section>
+<section class="content-section resources" id="resources">
+<p class="eyebrow">From our community</p>
+<h2>Resources & updates</h2>
+<div class="resource-grid">
+<a href="#contact">
+<span>01</span>
+<strong>Educational materials</strong>
+<small>Helpful downloads for learners</small>
+<b>→</b>
+</a>
+<a href="#contact">
+<span>02</span>
+<strong>Health & nutrition tips</strong>
+<small>Practical guidance for families</small>
+<b>→</b>
+</a>
+<a href="#contact">
+<span>03</span>
+<strong>Stories of change</strong>
+<small>Moments from our journey</small>
+<b>→</b>
+</a>
+</div>
+</section>
+<section class="contact" id="contact">
+<div class="contact-copy">
+<p class="eyebrow">Stay connected</p>
+<h2>Let’s keep the light growing.</h2>
+<p>Have a question, a partnership idea, or want to learn more? We’d love to hear from you.</p>
+<a class="text-link" href="mailto:lightforcommunity2@gmail.com">lightforcommunity2@gmail.com</a>
+</div>
+<form class="newsletter">
+<label for="email">Get community updates</label>
+<div>
+<input type="email" id="email" placeholder="Your email address" required>
+<button type="submit" aria-label="Sign up for newsletter">→</button>
+</div>
+<small>Stories, progress, and ways to get involved.</small>
+</form>
+</section>
+</main>
+<footer>
+<img src="lfc.jpg" alt="Light for Community">
+<p>Empowering education and nutrition.</p>
+<p>© <span id="year">
+</span> Light for Community</p>
+</footer>
+<script>const t=document.querySelector('.nav-toggle'),n=document.querySelector('nav');t.addEventListener('click',()=>{const o=n.classList.toggle('open');t.setAttribute('aria-expanded',o)});document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>{n.classList.remove('open');t.setAttribute('aria-expanded','false')}));document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
