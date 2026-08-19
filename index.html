@@ -31,9 +31,9 @@
 <main id="top">
 <section class="hero">
 <div class="hero-copy">
-<p class="eyebrow">Youth-led · Democratic Republic of Congo</p>
-<h1>Safe schools. Healthy children. Strong futures.</h1>
-<p class="hero-text">Light for the Community works with vulnerable and conflict-affected communities so children can learn, heal, and dream again.</p>
+<p class="eyebrow" id="hero-eyebrow">Youth-led · Democratic Republic of Congo</p>
+<h1 id="hero-title">Safe schools. Healthy children. Strong futures.</h1>
+<p class="hero-text" id="hero-text">Light for the Community works with vulnerable and conflict-affected communities so children can learn, heal, and dream again.</p>
 <div class="hero-actions">
 <a class="button button-primary" href="#involved">Support our work <span>→</span>
 </a>
@@ -46,7 +46,7 @@
 </section>
 <section class="mission-band">
 <p class="eyebrow">Our mission</p>
-<p class="mission-statement">Improving education, child well-being, nutrition and health through community action, advocacy and strategic partnerships.</p>
+<p class="mission-statement" id="mission-statement">Improving education, child well-being, nutrition and health through community action, advocacy and strategic partnerships.</p>
 </section>
 <section class="content-section about" id="about">
 <div class="section-intro">
@@ -86,7 +86,7 @@
 </div>
 <article class="project-card">
 <div class="project-visual" aria-hidden="true">
-<img src="community-learning.jpg" alt="">
+<img id="project-image" src="adima-classroom.jpg" alt="">
 <div class="school-roof">
 </div>
 <div class="school-body">
@@ -111,9 +111,9 @@
 </div>
 </div>
 <div class="project-content">
-<p class="tag">Current project</p>
-<h3>Adima School Renovation</h3>
-<p>We are helping renovate Adima Primary and Secondary School with modern classrooms, reliable water access, and daily nutrition for children.</p>
+<p class="tag" id="project-tag">Current project</p>
+<h3 id="project-title">Adima School Renovation</h3>
+<p id="project-description">We are helping renovate Adima Primary and Secondary School with modern classrooms, reliable water access, and daily nutrition for children.</p>
 <ul>
 <li>Safer, brighter classrooms</li>
 <li>Nutrition support for enrolled students</li>
@@ -125,11 +125,11 @@
 </article>
 </section>
 <section class="impact-section" id="impact">
-<div class="impact-image"><img src="community-learning.jpg" alt="A representative image of children learning together in a school community"></div>
+<div class="impact-image"><img id="impact-image" src="adima-classroom.jpg" alt="Children learning in a classroom at Adima School"></div>
 <div class="impact-copy">
 <p class="eyebrow">Our impact</p>
-<h2>Progress that children can feel every day.</h2>
-<p>At ADIMA, practical improvements are making schools safer and healthier place to be. This is only the beginning and every partnership helps us reach further.</p>
+<h2 id="impact-title">Progress that children can feel every day.</h2>
+<p id="impact-description">At ADIMA, practical improvements are making schools safer and healthier place to be. This is only the beginning and every partnership helps us reach further.</p>
 <div class="impact-stats"><div><strong>300+</strong><span>students reached</span></div><div><strong>6</strong><span>latrines constructed at ADIMA Institute</span></div></div>
 <p class="photo-note">Image is representative while we gather and prepare community-approved project photos.</p>
 </div>
@@ -139,11 +139,16 @@
 <h2>Young leaders, rooted in community.</h2>
 <p class="team-intro">LFC is led by people who believe the future of DRC is built with children, families and communities at the centre.</p>
 <div class="team-grid">
-<article><span>ZK</span><h3>Zaina Kalumbi</h3><p class="role">Founder & President</p><p>Strategic Leadership</p></article>
+<article><img class="team-photo zaina-photo" src="zaina-kalumbi.jpg" alt="Zaina Kalumbi"><h3>Zaina Kalumbi</h3><p class="role">Founder & President</p><p>Strategic Leadership</p></article>
 <article><img class="team-photo" src="puissance-kadibi.jpg" alt="Puissance Kadibi"><h3>Puissance Kadibi</h3><p class="role">Co-Founder & Secretary General</p><p>Administration & Partnerships</p></article>
 <article><img class="team-photo sylvain-photo" src="sylvain-mavala.jpg" alt="Sylvain Mavala"><h3>Sylvain Mavala</h3><p class="role">Co-Founder & Treasurer</p><p>Financial Management</p></article>
-<article><span>SK</span><h3>Sarah Kalumbi</h3><p class="role">Co-Founder & Health Lead</p><p>Health & Field Presence</p></article>
+<article><img class="team-photo sarah-photo" src="sarah-kalumbi.jpg" alt="Sarah Kalumbi"><h3>Sarah Kalumbi</h3><p class="role">Co-Founder & Health Lead</p><p>Health & Field Presence</p></article>
 </div>
+</section>
+<section class="content-section stories" id="stories" hidden>
+<p class="eyebrow">Stories & updates</p>
+<h2>News from our community.</h2>
+<div class="story-grid" id="story-grid"></div>
 </section>
 <section class="involved" id="involved">
 <div>
@@ -198,7 +203,7 @@
 <p class="eyebrow">Stay connected</p>
 <h2>Let’s keep the light growing.</h2>
 <p>Have a question, a partnership idea, or want to learn more? We’d love to hear from you.</p>
-<a class="text-link" href="mailto:lightforcommunity2@gmail.com">lightforcommunity2@gmail.com</a>
+<a class="text-link" id="contact-email" href="mailto:lightforcommunity2@gmail.com">lightforcommunity2@gmail.com</a>
 </div>
 <form class="newsletter">
 <label for="email">Get community updates</label>
@@ -216,6 +221,19 @@
 <p>© <span id="year">
 </span> Light for Community</p>
 </footer>
-<script>const t=document.querySelector('.nav-toggle'),n=document.querySelector('nav');t.addEventListener('click',()=>{const o=n.classList.toggle('open');t.setAttribute('aria-expanded',o)});document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>{n.classList.remove('open');t.setAttribute('aria-expanded','false')}));document.getElementById('year').textContent=new Date().getFullYear();</script>
+<script>
+const t=document.querySelector('.nav-toggle'),n=document.querySelector('nav');t.addEventListener('click',()=>{const o=n.classList.toggle('open');t.setAttribute('aria-expanded',o)});document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>{n.classList.remove('open');t.setAttribute('aria-expanded','false')}));document.getElementById('year').textContent=new Date().getFullYear();
+const setText=(id,value)=>{const el=document.getElementById(id);if(el&&value)el.textContent=value};
+const escapeHtml=value=>String(value||'').replace(/[&<>'"]/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[char]));
+const imagePath=value=>value&&(/^(https?:|\/)/.test(value)?value:value);
+fetch('content/site.json').then(response=>response.ok?response.json():Promise.reject()).then(site=>{
+  setText('hero-eyebrow',site.hero?.eyebrow);setText('hero-title',site.hero?.title);setText('hero-text',site.hero?.text);setText('mission-statement',site.mission);
+  setText('project-tag',site.project?.tag);setText('project-title',site.project?.title);setText('project-description',site.project?.description);setText('impact-title',site.impact?.title);setText('impact-description',site.impact?.description);
+  [['project-image',site.project?.image],['impact-image',site.impact?.image]].forEach(([id,src])=>{const image=document.getElementById(id);if(image&&src)image.src=imagePath(src)});
+  const email=document.getElementById('contact-email');if(email&&site.contact_email){email.href=`mailto:${site.contact_email}`;email.textContent=site.contact_email}
+  if(Array.isArray(site.team)&&site.team.length){document.querySelector('.team-grid').innerHTML=site.team.map(member=>`<article>${member.image?`<img class="team-photo" src="${escapeHtml(imagePath(member.image))}" alt="${escapeHtml(member.name)}" style="object-position:${escapeHtml(member.image_position||'center 38%')}">`:`<span>${escapeHtml(member.name.split(/\s+/).map(part=>part[0]).join('').slice(0,2))}</span>`}<h3>${escapeHtml(member.name)}</h3><p class="role">${escapeHtml(member.role)}</p><p>${escapeHtml(member.focus)}</p></article>`).join('')}
+}).catch(()=>{});
+fetch('content/blog-posts.json').then(response=>response.ok?response.json():Promise.reject()).then(data=>{const posts=Array.isArray(data.posts)?data.posts:[];if(!posts.length)return;document.getElementById('stories').hidden=false;document.getElementById('story-grid').innerHTML=posts.slice().sort((a,b)=>new Date(b.date)-new Date(a.date)).map(post=>`<article><p class="story-date">${escapeHtml(post.date)}</p><h3>${escapeHtml(post.title)}</h3><p>${escapeHtml(post.excerpt)}</p><details><summary>Read story</summary>${String(post.body||'').split(/\n\s*\n/).filter(Boolean).map(paragraph=>`<p>${escapeHtml(paragraph)}</p>`).join('')}</details></article>`).join('')}).catch(()=>{});
+</script>
 </body>
 </html>

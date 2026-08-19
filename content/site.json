@@ -1,0 +1,26 @@
+{
+  "hero": {
+    "eyebrow": "Youth-led · Democratic Republic of Congo",
+    "title": "Safe schools. Healthy children. Strong futures.",
+    "text": "Light for the Community works with vulnerable and conflict-affected communities so children can learn, heal, and dream again."
+  },
+  "mission": "Improving education, child well-being, nutrition and health through community action, advocacy and strategic partnerships.",
+  "project": {
+    "tag": "Current project",
+    "title": "Adima School Renovation",
+    "description": "We are helping renovate Adima Primary and Secondary School with modern classrooms, reliable water access, and daily nutrition for children.",
+    "image": "adima-classroom.jpg"
+  },
+  "impact": {
+    "title": "Progress that children can feel every day.",
+    "description": "At ADIMA, practical improvements are making schools safer and healthier place to be. This is only the beginning and every partnership helps us reach further.",
+    "image": "adima-classroom.jpg"
+  },
+  "contact_email": "lightforcommunity2@gmail.com",
+  "team": [
+    {"name": "Zaina Kalumbi", "role": "Founder & President", "focus": "Strategic Leadership", "image": "zaina-kalumbi.jpg", "image_position": "center 48%"},
+    {"name": "Puissance Kadibi", "role": "Co-Founder & Secretary General", "focus": "Administration & Partnerships", "image": "puissance-kadibi.jpg", "image_position": "center 38%"},
+    {"name": "Sylvain Mavala", "role": "Co-Founder & Treasurer", "focus": "Financial Management", "image": "sylvain-mavala.jpg", "image_position": "center top"},
+    {"name": "Sarah Kalumbi", "role": "Co-Founder & Health Lead", "focus": "Health & Field Presence", "image": "sarah-kalumbi.jpg", "image_position": "center 25%"}
+  ]
+}

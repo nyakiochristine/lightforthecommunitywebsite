@@ -1,17 +1,66 @@
 backend:
-  name: github
-  repo: nyakiochristine/lightforthecommunitywebsite  # Replace with your GitHub repo
-  branch: main             # Your repo's default branch
-  auth_type: implicit      # Use implicit grant flow for OAuth (recommended)
-media_folder: "static/images/uploads"
-public_folder: "/images/uploads"
+  name: git-gateway
+  branch: main
+local_backend: true
+media_folder: "uploads"
+public_folder: "/uploads"
 
 collections:
-  - name: projects
-    label: Projects
-    folder: content/projects
-    create: true
-    slug: "{{slug}}"
+  - name: website
+    label: Website content
+    files:
+      - name: site
+        label: Website settings
+        file: content/site.json
+        fields:
+          - label: Hero
+            name: hero
+            widget: object
+            fields:
+              - {label: Eyebrow, name: eyebrow, widget: string}
+              - {label: Heading, name: title, widget: string}
+              - {label: Introduction, name: text, widget: text}
+          - {label: Mission statement, name: mission, widget: text}
+          - label: Current project
+            name: project
+            widget: object
+            fields:
+              - {label: Label, name: tag, widget: string}
+              - {label: Title, name: title, widget: string}
+              - {label: Description, name: description, widget: text}
+              - {label: Photo, name: image, widget: image}
+          - label: Impact section
+            name: impact
+            widget: object
+            fields:
+              - {label: Heading, name: title, widget: string}
+              - {label: Description, name: description, widget: text}
+              - {label: Photo, name: image, widget: image}
+          - {label: Contact email, name: contact_email, widget: string}
+          - label: Team members
+            name: team
+            widget: list
+            fields:
+              - {label: Full name, name: name, widget: string}
+              - {label: Role, name: role, widget: string}
+              - {label: Area of work, name: focus, widget: string}
+              - {label: Photo, name: image, widget: image}
+              - {label: Photo position, name: image_position, widget: string, required: false, hint: "For example: center 35%"}
+  - name: blog
+    label: Blog posts
+    files:
+      - name: posts
+        label: Posts
+        file: content/blog-posts.json
+        fields:
+          - label: Posts
+            name: posts
+            widget: list
+            fields:
+              - {label: Title, name: title, widget: string}
+              - {label: Publish date, name: date, widget: datetime, date_format: "YYYY-MM-DD", time_format: false}
+              - {label: Short summary, name: excerpt, widget: text}
+              - {label: Article, name: body, widget: markdown}
     fields:
       - {label: Title, name: title, widget: string}
       - {label: Summary, name: summary, widget: text}
