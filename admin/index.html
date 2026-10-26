@@ -2,9 +2,23 @@
 <html>
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Light for Community Admin</title>
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
   </head>
-  <body></body>
+  <body>
+    <p id="cms-status">Loading the Light for Community editor…</p>
+    <noscript>Please enable JavaScript to use the website editor.</noscript>
+    <script>
+      const status = document.getElementById('cms-status');
+      const loadCms = (src, fallback) => {
+        const script = document.createElement('script');
+        script.src = src;
+        script.onerror = () => fallback ? loadCms(fallback) : status.textContent = 'The editor could not load. Please check your connection and reload this page.';
+        script.onload = () => status.remove();
+        document.body.appendChild(script);
+      };
+      loadCms('https://cdn.jsdelivr.net/npm/decap-cms@3.8.2/dist/decap-cms.js', 'https://unpkg.com/decap-cms@3.8.2/dist/decap-cms.js');
+    </script>
+  </body>
 </html>
