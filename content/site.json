@@ -17,6 +17,9 @@
     "image": "adima-classroom.jpg"
   },
   "contact_email": "lightforcommunity2@gmail.com",
+  "forms": {
+    "formspree_endpoint": "https://formspree.io/f/mjyyyrow"
+  },
   "team": [
     {"name": "Zaina Kalumbi", "role": "Founder & President", "focus": "Strategic Leadership", "image": "zaina-kalumbi.jpg", "image_position": "center 48%"},
     {"name": "Puissance Kadibi", "role": "Co-Founder & Secretary General", "focus": "Administration & Partnerships", "image": "puissance-kadibi.jpg", "image_position": "center 38%"},

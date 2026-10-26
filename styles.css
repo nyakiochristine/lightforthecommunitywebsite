@@ -101,6 +101,7 @@ nav a{font-size:.9rem;color:var(--ink);font-weight:600;text-decoration:none}
 .newsletter input::placeholder{color:#b9cdbd}
 .newsletter button{border:0;background:transparent;color:#f2c540;font-size:2rem;cursor:pointer}
 .newsletter small{display:block;margin-top:13px;color:#b9cdbd}
+.newsletter button:disabled{opacity:.55;cursor:wait}.form-honeypot{position:absolute;left:-9999px;width:1px;height:1px;opacity:0;pointer-events:none}
 footer{padding:36px 24px;text-align:center;background:#102b22;color:#a6b9aa;font-size:.85rem}
 footer img{margin:0 auto 15px;width:100px;height:50px}
 footer p{margin:4px}

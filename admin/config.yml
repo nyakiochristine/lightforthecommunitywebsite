@@ -37,6 +37,11 @@ collections:
               - {label: Description, name: description, widget: text}
               - {label: Photo, name: image, widget: image}
           - {label: Contact email, name: contact_email, widget: string}
+          - label: Community updates form
+            name: forms
+            widget: object
+            fields:
+              - {label: Formspree endpoint, name: formspree_endpoint, widget: string, required: false, hint: "Paste the Formspree endpoint, e.g. https://formspree.io/f/abcdwxyz. Leave blank to open an email draft instead."}
           - label: Team members
             name: team
             widget: list

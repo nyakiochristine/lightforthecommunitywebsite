@@ -205,13 +205,14 @@
 <p>Have a question, a partnership idea, or want to learn more? We’d love to hear from you.</p>
 <a class="text-link" id="contact-email" href="mailto:lightforcommunity2@gmail.com">lightforcommunity2@gmail.com</a>
 </div>
-<form class="newsletter">
+<form class="newsletter" id="updates-form" method="post" novalidate>
 <label for="email">Get community updates</label>
 <div>
-<input type="email" id="email" placeholder="Your email address" required>
+<input type="email" id="email" name="email" placeholder="Your email address" autocomplete="email" required>
 <button type="submit" aria-label="Sign up for newsletter">→</button>
 </div>
-<small>Stories, progress, and ways to get involved.</small>
+<input class="form-honeypot" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+<small id="updates-note">Stories, progress, and ways to get involved.</small>
 </form>
 </section>
 </main>
@@ -231,9 +232,12 @@ fetch('content/site.json').then(response=>response.ok?response.json():Promise.re
   setText('project-tag',site.project?.tag);setText('project-title',site.project?.title);setText('project-description',site.project?.description);setText('impact-title',site.impact?.title);setText('impact-description',site.impact?.description);
   [['project-image',site.project?.image],['impact-image',site.impact?.image]].forEach(([id,src])=>{const image=document.getElementById(id);if(image&&src)image.src=imagePath(src)});
   const email=document.getElementById('contact-email');if(email&&site.contact_email){email.href=`mailto:${site.contact_email}`;email.textContent=site.contact_email}
+  const updatesForm=document.getElementById('updates-form');if(updatesForm&&site.forms?.formspree_endpoint){updatesForm.dataset.formspreeEndpoint=site.forms.formspree_endpoint}
   if(Array.isArray(site.team)&&site.team.length){document.querySelector('.team-grid').innerHTML=site.team.map(member=>`<article>${member.image?`<img class="team-photo" src="${escapeHtml(imagePath(member.image))}" alt="${escapeHtml(member.name)}" style="object-position:${escapeHtml(member.image_position||'center 38%')}">`:`<span>${escapeHtml(member.name.split(/\s+/).map(part=>part[0]).join('').slice(0,2))}</span>`}<h3>${escapeHtml(member.name)}</h3><p class="role">${escapeHtml(member.role)}</p><p>${escapeHtml(member.focus)}</p></article>`).join('')}
 }).catch(()=>{});
 fetch('content/blog-posts.json').then(response=>response.ok?response.json():Promise.reject()).then(data=>{const posts=Array.isArray(data.posts)?data.posts:[];if(!posts.length)return;document.getElementById('stories').hidden=false;document.getElementById('story-grid').innerHTML=posts.slice().sort((a,b)=>new Date(b.date)-new Date(a.date)).map(post=>`<article><p class="story-date">${escapeHtml(post.date)}</p><h3>${escapeHtml(post.title)}</h3><p>${escapeHtml(post.excerpt)}</p><details><summary>Read story</summary>${String(post.body||'').split(/\n\s*\n/).filter(Boolean).map(paragraph=>`<p>${escapeHtml(paragraph)}</p>`).join('')}</details></article>`).join('')}).catch(()=>{});
+const updatesForm=document.getElementById('updates-form');const updatesNote=document.getElementById('updates-note');
+updatesForm?.addEventListener('submit',async event=>{event.preventDefault();if(!updatesForm.reportValidity())return;const submitButton=updatesForm.querySelector('button');const endpoint=updatesForm.dataset.formspreeEndpoint;const emailAddress=updatesForm.elements.email.value;if(!endpoint){const recipient=document.getElementById('contact-email')?.textContent||'lightforcommunity2@gmail.com';window.location.href=`mailto:${recipient}?subject=${encodeURIComponent('Community updates signup')}&body=${encodeURIComponent(`Please add ${emailAddress} to the Light for Community updates list.`)}`;updatesNote.textContent='Your email app is opening so you can send your signup request.';return}submitButton.disabled=true;updatesNote.textContent='Signing you up…';try{const response=await fetch(endpoint,{method:'POST',headers:{Accept:'application/json'},body:new FormData(updatesForm)});if(!response.ok)throw new Error('Formspree request failed');updatesForm.reset();updatesNote.textContent='Thank you — you’re on the list.'}catch(error){updatesNote.textContent='We could not submit your request. Please try again or email us directly.'}finally{submitButton.disabled=false}});
 </script>
 </body>
 </html>
